@@ -3,7 +3,7 @@ Summary(pl):	Narzêdzia do ¶ledzenia Linuksa
 Name:		TraceToolkit
 Version:	0.9.6
 %define		_pre pre2
-Release:	0.%{_pre}.1
+Release:	0.%{_pre}.2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.opersys.com/ftp/pub/LTT/%{name}-%{version}%{_pre}.tgz
@@ -86,4 +86,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/*
 
 %files static
+%defattr(644,root,root,755)
 %{_libdir}/lib*.a
