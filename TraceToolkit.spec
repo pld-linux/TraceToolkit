@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.opersys.com/ftp/pub/LTT/%{name}-%{version}.tgz
+# Source0-md5:	f3ddcc3ad9213bb970fb9a0f5dfe9e7f
 URL:		http://www.opersys.com/LTT/
 BuildRequires:	gtk+-devel
 BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
