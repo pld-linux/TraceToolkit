@@ -1,12 +1,13 @@
 Summary:	Linux Trace Toolkit
 Summary(pl):	Narzêdzia do ¶ledzenia Linuksa
 Name:		TraceToolkit
-Version:	0.9.5
-Release:	1
+Version:	0.9.6
+%define		_pre pre2
+Release:	0.%{_pre}.1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://www.opersys.com/ftp/pub/LTT/%{name}-%{version}.tgz
-# Source0-md5:	f3ddcc3ad9213bb970fb9a0f5dfe9e7f
+Source0:	http://www.opersys.com/ftp/pub/LTT/%{name}-%{version}%{_pre}.tgz
+# Source0-md5:	09be9c2b411070a51ba85be5570f0d05
 URL:		http://www.opersys.com/LTT/
 BuildRequires:	gtk+-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -24,7 +25,7 @@ j±dra potrzebne do ¶ledzenia oraz narzêdzia u¿ytkownika potrzebne do
 przegl±dania wyników ¶ledzenia.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{_pre}
 
 %build
 %configure2_13
@@ -46,5 +47,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_sbindir}/*
+%attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
