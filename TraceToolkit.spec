@@ -11,7 +11,6 @@ URL:		http://www.opersys.com/LTT/
 BuildRequires:	gtk+-devel
 BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 The Linux Trace Toolkit, more commonly known as LTT, is a
 fully-featured tracing system for the Linux kernel. It includes both
@@ -34,14 +33,18 @@ przegl±dania wyników ¶ledzenia.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
  
 %clean
-rm -rf $RPM_BUILD_ROOT/%{name}-%{version}
+rm -rf $RPM_BUILD_ROOT
+
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
 %doc README 
-#%attr(755,root,root) %{_bindir}/
-#%attr(755,root,root) %{_libdir}/
-#%attr(755,root,root) %{_sbindir}/
+%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_sbindir}/*
+%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
