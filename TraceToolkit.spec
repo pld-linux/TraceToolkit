@@ -10,7 +10,6 @@ URL:		http://www.opersys.com/LTT/
 BuildRequires:	gtk+-devel
 BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 The Linux Trace Toolkit, more commonly known as LTT, is a
