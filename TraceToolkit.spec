@@ -5,8 +5,8 @@ Version:	0.9.5
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	ftp://ftp.opersys.com/pub/LTT/%{name}-%{version}.tgz
-Url:		http://www.opersys.com/LTT/
+Source0:	http://www.opersys.com/ftp/pub/LTT/%{name}-%{version}.tgz
+URL:		http://www.opersys.com/LTT/
 BuildRequires:	gtk+-devel
 BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,8 +33,8 @@ przegl±dania wyników ¶ledzenia.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
 
+%{__make} DESTDIR=$RPM_BUILD_ROOT install
  
 %clean
 rm -rf $RPM_BUILD_ROOT/%{name}-%{version}
