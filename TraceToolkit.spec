@@ -27,20 +27,28 @@ j±dra potrzebne do ¶ledzenia oraz narzêdzia u¿ytkownika potrzebne do
 przegl±dania wyników ¶ledzenia.
 
 %package devel 
-Summary:        Linux Trace Toolkit - devel
-Group:		Development
+Summary:	Header files for Linux Trace Toolkit library
+Summary(pl):	Pliki nag³ówkowe biblioteki Linux Trace Toolkit
+Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description devel
-Linux Trace Toolkit - development files.
+Header files for Linux Trace Toolkit library
+
+%description devel -l pl
+Pliki nag³ówkowe biblioteki Linux Trace Toolkit
 
 %package static
-Summary:        Linux Trace Toolkit - devel
-Group:		Libraries
-Requires:	%{name} = %{epoch}:%{version}-%{release}
+Summary:	Static version of Linux Trace Toolkit library
+Summary(pl):	Statyczna wersja biblioteki Linux Trace Toolkit
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
-Linux Trace Toolkit - static libraries.
+Static version of Linux Trace Toolkit library.
+
+%description static -l pl
+Statyczna wersja biblioteki Linux Trace Toolkit.
 
 %prep
 %setup -q -n %{name}-%{version}%{_pre}
@@ -73,9 +81,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/*
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
+%{_includedir}/*
 
 %files static
 %{_libdir}/lib*.a
