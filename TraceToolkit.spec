@@ -12,7 +12,6 @@ URL:		http://www.opersys.com/LTT/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel
-BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,7 +30,7 @@ przegl±dania wyników ¶ledzenia.
 Summary:	Header files for Linux Trace Toolkit library
 Summary(pl):	Pliki nag³ówkowe biblioteki Linux Trace Toolkit
 Group:		Development/Libraries
-Requires:	%{name} = %{epoch}:%{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for Linux Trace Toolkit library
@@ -43,7 +42,7 @@ Pliki nag³ówkowe biblioteki Linux Trace Toolkit
 Summary:	Static version of Linux Trace Toolkit library
 Summary(pl):	Statyczna wersja biblioteki Linux Trace Toolkit
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static version of Linux Trace Toolkit library.
