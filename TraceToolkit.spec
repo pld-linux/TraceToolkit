@@ -1,5 +1,5 @@
 Summary:	Linux Trace Toolkit
-Summary(pl):	Narzêdzia do ¶ledzenia Linuksa
+Summary(pl.UTF-8):   NarzÄ™dzia do Å›ledzenia Linuksa
 Name:		TraceToolkit
 Version:	0.9.6
 %define		_pre pre2
@@ -20,34 +20,34 @@ fully-featured tracing system for the Linux kernel. It includes both
 the kernel components required for tracing and the user-level tools
 required to view the traces.
 
-%description -l pl
-Linux Trace Toolkit, znany bardziej jako LTT, jest w pe³ni
-funkcjonalnym systemem do ¶ledzenia j±dra Linuksa. Zawiera elementy
-j±dra potrzebne do ¶ledzenia oraz narzêdzia u¿ytkownika potrzebne do
-przegl±dania wyników ¶ledzenia.
+%description -l pl.UTF-8
+Linux Trace Toolkit, znany bardziej jako LTT, jest w peÅ‚ni
+funkcjonalnym systemem do Å›ledzenia jÄ…dra Linuksa. Zawiera elementy
+jÄ…dra potrzebne do Å›ledzenia oraz narzÄ™dzia uÅ¼ytkownika potrzebne do
+przeglÄ…dania wynikÃ³w Å›ledzenia.
 
 %package devel 
 Summary:	Header files for Linux Trace Toolkit library
-Summary(pl):	Pliki nag³ówkowe biblioteki Linux Trace Toolkit
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki Linux Trace Toolkit
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for Linux Trace Toolkit library
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki Linux Trace Toolkit
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki Linux Trace Toolkit
 
 %package static
 Summary:	Static version of Linux Trace Toolkit library
-Summary(pl):	Statyczna wersja biblioteki Linux Trace Toolkit
+Summary(pl.UTF-8):   Statyczna wersja biblioteki Linux Trace Toolkit
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static version of Linux Trace Toolkit library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna wersja biblioteki Linux Trace Toolkit.
 
 %prep
