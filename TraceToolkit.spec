@@ -1,5 +1,5 @@
 Summary:	Linux Trace Toolkit
-Summary(pl.UTF-8):   Narzędzia do śledzenia Linuksa
+Summary(pl.UTF-8):	Narzędzia do śledzenia Linuksa
 Name:		TraceToolkit
 Version:	0.9.6
 %define		_pre pre2
@@ -28,7 +28,7 @@ przeglądania wyników śledzenia.
 
 %package devel 
 Summary:	Header files for Linux Trace Toolkit library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki Linux Trace Toolkit
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Linux Trace Toolkit
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -40,7 +40,7 @@ Pliki nagłówkowe biblioteki Linux Trace Toolkit
 
 %package static
 Summary:	Static version of Linux Trace Toolkit library
-Summary(pl.UTF-8):   Statyczna wersja biblioteki Linux Trace Toolkit
+Summary(pl.UTF-8):	Statyczna wersja biblioteki Linux Trace Toolkit
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
